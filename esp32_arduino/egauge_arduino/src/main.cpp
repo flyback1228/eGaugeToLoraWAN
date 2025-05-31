@@ -45,9 +45,9 @@ struct data_table_t {
 };
 
 // --- eGauge configuration
-const char *egaugeHost = "192.168.1.88";
+//const char *egaugeHost = "192.168.1.88";
+IPAddress egaugeIp(192, 168, 1, 88);
 const int egaugePort = 80;
-const char *egaugePath = "/cgi-bin/egauge-show";
 
 // --- Static IP configuration for Ethernet
 byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};
@@ -248,29 +248,32 @@ void egaugeTask(void *parameter) {
 	data_table_t sql_data;
 
 	for (;;) {
-		if (client.connect(egaugeHost, egaugePort)) {
-			client.println("GET /cgi-bin/egauge?inst HTTP/1.1");
-			client.println("Host: 192.168.1.88");
-			client.println("Connection: close");
-			client.println();
+		if (client.connect(egaugeIp, egaugePort)) {
+			client.print("GET /cgi-bin/egauge?inst HTTP/1.1\r\n");
+			client.print("Host: 192.168.1.88\r\n");
+			client.print("Connection: close\r\n");
+			client.print("\r\n");
 
 			String response = "";
 			unsigned long timeout = millis();
 			while (client.connected() && millis() - timeout < 3000) {
 				while (client.available()) {
-					response += client.read();
+					char c = client.read();
+					response += c;
 				}
 			}
 			client.stop();
 
 			// Parse and convert data
+			//Serial.println(response);
+
 			if (response.length() > 0 && EgaugeParser::Parse(response, lora_data_count, lora_body)) {
 				Serial.println("Reading eGauge Data Success");
 				int flashTimes = 6;
 				xQueueSend(ledYellowFlashQueue, &flashTimes, 0);
+				error_code &= 0xFE;
 
-				if (SAVE_TO_LOCAL) {
-					error_code &= 0xFE;
+				if (SAVE_TO_LOCAL) {					
 					if (rtc.begin()) {
 						sql_data.time = rtc.now().unixtime();
 					}
@@ -289,6 +292,7 @@ void egaugeTask(void *parameter) {
 				Serial.println("Reading eGauge Data Fail");
 			}
 		} else {
+			error_code |= 0x01;
 			Serial.println("Connecting to eGauge Fails, Please check the connection.");
 		}
 		vTaskDelay(pdMS_TO_TICKS(10000)); // 10s polling interval
