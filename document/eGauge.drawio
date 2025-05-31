@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.3">
+  <diagram name="Page-1" id="smCWLD2nIn-B-GSyi-T_">
+    <mxGraphModel dx="826" dy="455" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1HnHN6m32Zniobp0EvtW-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="1HnHN6m32Zniobp0EvtW-2" target="1HnHN6m32Zniobp0EvtW-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="1HnHN6m32Zniobp0EvtW-2" target="1HnHN6m32Zniobp0EvtW-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-2" value="MCU" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="230" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-3" value="WIFI Server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="150" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-5" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;startFill=0;" edge="1" parent="1" source="1HnHN6m32Zniobp0EvtW-2" target="1HnHN6m32Zniobp0EvtW-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="280" as="sourcePoint" />
+            <mxPoint x="230" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="268" y="200" />
+              <mxPoint x="230" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-6" value="External Watchdog" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="235" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-7" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startFill=0;" edge="1" parent="1" source="1HnHN6m32Zniobp0EvtW-2" target="1HnHN6m32Zniobp0EvtW-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="380" as="sourcePoint" />
+            <mxPoint x="420" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-8" value="eGauge" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-9" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startFill=0;" edge="1" parent="1" source="1HnHN6m32Zniobp0EvtW-8" target="1HnHN6m32Zniobp0EvtW-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="350" as="sourcePoint" />
+            <mxPoint x="300" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-10" value="Ethernet" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="185" y="228" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-11" value="SD card" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-12" value="EEProm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-13" value="LoraWAN Transmitter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="150" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-14" value="" style="endArrow=none;html=1;rounded=0;exitX=0.716;exitY=-0.005;exitDx=0;exitDy=0;entryX=0.528;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="1HnHN6m32Zniobp0EvtW-2" target="1HnHN6m32Zniobp0EvtW-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="200" as="sourcePoint" />
+            <mxPoint x="560" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="200" />
+              <mxPoint x="368" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="1HnHN6m32Zniobp0EvtW-18" target="1HnHN6m32Zniobp0EvtW-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1HnHN6m32Zniobp0EvtW-18" value="Clock" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

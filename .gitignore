@@ -1,0 +1,6 @@
+esp32_arduino/build/
+lorawan_firmware/.settings/
+lorawan_firmware/Debug/
+lorawan_firmware/Release/
+lorawan_firmware/Core/Inc/Backup/
+lorawan_firmware/Core/Src/Backup/
